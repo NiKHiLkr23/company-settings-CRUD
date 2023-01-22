@@ -1,11 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+import Header from "@/components/Header";
+import Head from "next/head";
+import coverImage from "../public/images/GeneralCoverImage.jpg";
+import Image from "next/image";
 
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+function Home() {
   return (
     <>
       <Head>
@@ -14,110 +12,53 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.tsx</code>
-          </p>
-          <div>
+      <Header />
+      <main className="max-w-4xl mx-auto">
+        <div className="md:relative md:flex items-center justify-center p-5 md:p-0">
+          <Image src={coverImage} alt="cover" />
+
+          <div className="md:absolute top-8 left-5 max-w-sm text-md font-mono mx-auto text-justify items-center justify-center">
+            Hi there, This project is created <br /> using Nextjs. Focused on
+            CRUD of users <br /> data pulled from an API. <br /> <br /> Head
+            over to users page <br /> to get more information...
+          </div>
+        </div>
+        <div>
+          <p className="font-serif p-5">
+            The Data is pulled from{" "}
             <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+              href="https://xata.io/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noreferrer"
+              className="text-blue-400"
             >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
+              Xata Database{" "}
             </a>
-          </div>
-        </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
-          </div>
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
+            using Rapid API.
+            <a
+              href="https://github.com/NiKHiLkr23/fakeUsers-api"
+              className="text-blue-400"
+              rel="noreferrer"
+              target="_blank"
+            >
+              {" "}
+              Here&apos;s{" "}
+            </a>
+            the Github Link of API. And{" "}
+            <a
+              href="https://rapidapi.com/NiKHiLkr23/api/uers-api"
+              className="text-blue-400"
+              target="_blank"
+              rel="noreferrer"
+            >
+              here&apos;s{" "}
+            </a>
+            the Rapid API Link.
+          </p>
         </div>
       </main>
     </>
-  )
+  );
 }
+
+export default Home;
