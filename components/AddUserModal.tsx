@@ -44,9 +44,9 @@ const AddUser: FC<IPropTypes> = ({ formData, setFormData }) => {
       return console.log("Please Enter the Details...");
     let { Name, Email, Role, Status } = formData;
     const model = {
-      Image: `https://github.com/NiKHiLkr23/company-settings-CRUD/blob/f56fbeabecaa90f9700aad3b9e99dbb95cd82f93/public/images/ProfilePicture${Math.floor(
+      Image: `https://raw.githubusercontent.com/NiKHiLkr23/company-settings-CRUD/main/public/images/ProfilePicture${Math.floor(
         Math.random() * 6
-      )}.jpg?raw=true`,
+      )}.jpg`,
       Name,
       Email,
       Role,
