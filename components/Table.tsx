@@ -14,7 +14,7 @@ import {
 } from "@/redux/reducer";
 
 interface IPropTypes {
-  users?: IUser[];
+  users: any;
 }
 const Table: React.FC<IPropTypes> = ({ users }) => {
   const deleteId = useSelector((state: any) => state.app.client.deleteId);
