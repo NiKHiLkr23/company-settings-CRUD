@@ -11,7 +11,7 @@ function Header() {
         Comapnay Settings
         <div className="flex grow justify-end">
           <a
-            href="https://github.com/NiKHiLkr23"
+            href="https://github.com/NiKHiLkr23/company-settings-CRUD"
             target="_blank"
             rel="noreferrer"
           >
